@@ -5,23 +5,23 @@ var addArr = JSON.parse(localStorage.getItem("schedule"));
 
 
 
+
 function handlejobsort()
 {
-  var selected=document.querySelector("#filterVenue").value;
+  var selected=document.querySelector("#filterVenue").value
   
     var filterList=addArr.filter(function (elem){
       return elem.venue==selected
     })
     displayData(filterList)
 }
-
-    var favouritesArr=JSON.parse(localStorage.getItem("favourites"))||[];
+    
 
     displayData(addArr);
 
-
+    var favouritesArr=JSON.parse(localStorage.getItem("favourites"))||[]
     function displayData(data){
-
+      document.querySelector("tbody").innerHTML=""
       data.forEach(function (elem){
 
       var tr=document.createElement("tr");
